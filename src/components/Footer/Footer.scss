@@ -1,0 +1,95 @@
+@import "../../styles/styles.scss";
+
+.app-footer {
+  width: 100%;
+  padding: 5rem 0;
+
+  &__logo-text {
+    font-size: 2.5rem;
+    color: $black;
+    font-weight: 500;
+    margin-top: 1rem;
+    width: max-content;
+  }
+
+  h4 {
+    font-size: 2.3rem;
+    color: $black;
+    border-left: 3px solid $green;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: start;
+
+    @include laptop-xl {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    @include laptop {
+      justify-content: start;
+    }
+  }
+
+  &__info-icon {
+    font-size: 3rem;
+    color: $green;
+  }
+
+  &__column {
+    display: flex;
+    align-items: center;
+    margin-right: 17rem;
+    margin-bottom: 2.5rem;
+
+    &:first-child {
+      flex-direction: column;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: $black;
+      margin-left: 1rem;
+    }
+  }
+
+  &__social-wrap {
+    display: flex;
+    // align-items: center;
+
+    span {
+      font-size: 1.6rem;
+      display: block;
+    }
+
+    > * {
+      margin-right: 1rem;
+    }
+  }
+
+  &__banner {
+    font-size: 1.4rem;
+    color: $black;
+    margin-left: 1.4rem;
+  }
+
+  &__last-column {
+    width: 30rem;
+    line-height: 2.5rem;
+
+    @include laptop-xl {
+      margin-top: 2.4rem;
+    }
+    @include laptop {
+      margin-top: 3.4rem;
+    }
+  }
+
+  &__contact-wrapper {
+    @media screen and (max-width: 1061px) {
+      margin-top: 2.4rem;
+    }
+  }
+}

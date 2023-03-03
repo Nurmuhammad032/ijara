@@ -1,0 +1,189 @@
+@import "../../styles/styles.scss";
+
+.app {
+  &__lizing-container {
+    padding: 12rem 0;
+    overflow: hidden;
+
+    .custom-container-lizing {
+      @include laptop-xxl {
+        padding-right: $container-padding;
+      }
+      @include laptop {
+        padding-right: $container-laptopPadding;
+      }
+      @include phones {
+        padding-right: $container-phonePadding;
+      }
+    }
+  }
+
+  &__lizing-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > div {
+      width: 50%;
+      @include laptop-xxl {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @include laptop-xxl {
+      justify-content: center;
+    }
+  }
+
+  &__lizing-btnWrapper {
+    display: flex;
+    align-items: center;
+
+    @include laptop-xxl {
+      justify-content: center;
+    }
+  }
+
+  &__lizing-imgWrapper {
+    max-width: 78rem;
+    position: relative;
+    @include laptop-xxl {
+      display: none;
+    }
+
+    img:nth-child(2) {
+      position: absolute;
+      width: 140%;
+      right: -20rem;
+      z-index: -1;
+      top: 14rem;
+    }
+  }
+
+  &__lizing-img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__lizing-title {
+    color: $black;
+    font-size: 6rem;
+    font-weight: 700;
+
+    @include laptop-xxl {
+      font-size: 5rem;
+    }
+    @include laptop {
+      font-size: 4rem;
+    }
+    @include phones {
+      font-size: 2rem;
+    }
+  }
+
+  &__lizing-desc {
+    display: block;
+    color: $black;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    margin: 3rem 0;
+
+    @include laptop {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+    @include phones {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__lizing-btn {
+    padding: 2rem 1.3rem;
+    color: $green;
+    font-size: 2.3rem;
+    border: none;
+    border: 0.3rem solid $green;
+
+    @include laptop {
+      font-size: 1.6rem;
+    }
+    @include phones {
+      font-size: 1.5rem;
+      padding: 1.5rem 0.8rem;
+    }
+
+    &:first-child {
+      color: $white;
+    }
+  }
+
+  &__lizing-btn:nth-child(1) {
+    margin-right: 4rem;
+    background-color: $green;
+  }
+  &__lizing-btn:nth-child(2) {
+    background-color: transparent;
+
+    &:hover {
+      background-color: $green;
+      color: $white;
+    }
+  }
+
+  &__lizing-footer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -9rem;
+    display: flex;
+    justify-content: space-between;
+    width: 130rem;
+    padding: 2.9rem 3.3rem;
+    background-size: cover !important;
+    background-position: center !important;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.2);
+
+    @include laptop-xxl {
+      width: 90%;
+    }
+    @include laptop {
+      display: block;
+      margin-bottom: -15rem;
+    }
+    @include tablet {
+      margin-bottom: -20rem;
+    }
+    @include phones {
+      margin-bottom: -24rem;
+    }
+  }
+
+  &__lizingFooter-items {
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+    &:nth-child(-n + 2) {
+      border-right: 0.2rem solid #eae3e3;
+      @include laptop {
+        border-right: none;
+        border-bottom: 0.2rem solid #eae3e3;
+      }
+    }
+
+    span {
+      display: block;
+      font-size: 3.4rem;
+      color: $green;
+    }
+
+    p {
+      margin-left: 2.5rem;
+      color: $white;
+      font-size: 2rem;
+      @include laptop {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

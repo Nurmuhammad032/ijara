@@ -1,0 +1,221 @@
+@import "../../styles/styles.scss";
+
+.app-section5 {
+  padding-top: 5rem;
+  position: relative;
+  // position: relative;
+
+  button {
+    background-color: $green;
+    color: $white;
+    font-size: 2.5rem;
+    padding: 1.2rem 9rem;
+    border: none;
+    @include laptop {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include laptop-xxl {
+      display: block;
+    }
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+    @include laptop-xxl {
+      width: 80%;
+    }
+  }
+
+  &__right img {
+    position: absolute;
+    z-index: -1;
+    top: 9rem;
+    right: 0;
+    width: 64.7rem;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+
+    @include laptop-xxl {
+      display: none;
+    }
+  }
+
+  &__right div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 70rem;
+    min-width: 35rem;
+
+    @include laptop-xxl {
+    }
+  }
+
+  &__left {
+    h1 {
+      color: $black;
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+
+      @include laptop {
+        font-size: 3rem;
+      }
+    }
+
+    div {
+      width: 11rem;
+      height: 0.5rem;
+      background-color: $green;
+    }
+
+    p {
+      margin: 2rem 0;
+      font-size: 2.5rem;
+      color: $black;
+
+      @include laptop {
+        font-size: 1.5rem;
+      }
+    }
+
+    @include laptop-xxl {
+      margin-top: 3rem;
+    }
+  }
+
+  &__middle-wrapper {
+    margin: 10rem auto 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 4.5rem;
+      color: $black;
+
+      @include laptop {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      font-size: 2.5rem;
+      color: $black;
+
+      @include laptop {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__footer-wrapper {
+    width: 100%;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 3rem 0;
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 400;
+      color: $white;
+      margin-bottom: 2rem;
+      @include center-mode;
+
+      @include laptop {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__footer-inputs {
+    width: 57.7rem;
+    margin: auto;
+
+    @include tablet {
+      width: 90%;
+    }
+    // background-color: red;
+
+    div:nth-child(1),
+    div:nth-child(2) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2.9rem;
+      align-items: center;
+
+      @include phones {
+        flex-direction: column;
+        margin-bottom: 0;
+      }
+    }
+
+    div input:not(input[type="checkbox"]) {
+      width: 45%;
+      color: $white;
+      font-size: 1.5rem;
+      padding: 1.3rem 1.5rem;
+      border: 2px solid $green;
+      background-color: transparent;
+
+      @include phones {
+        margin-bottom: 1rem;
+        width: 100%;
+      }
+    }
+    div input[type="checkbox"] {
+      border: none;
+      width: 2rem;
+      display: block;
+    }
+  }
+
+  &__footer-checked {
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+
+    @include phones {
+      display: block;
+    }
+
+    .checkbox-wrapper {
+      margin: 0 !important;
+      display: flex;
+      // display: flex !important;
+      // width: 100%;
+      // background-color: red;
+    }
+
+    p {
+      margin-left: 1rem;
+      font-size: 1.2rem;
+      color: $white;
+
+      a {
+        color: $green;
+        text-decoration: underline;
+      }
+    }
+
+    button {
+      padding: 0.6rem 2rem !important;
+      font-size: 1.5rem;
+
+      @include phones {
+        margin: 1rem 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+@import "../../styles/styles.scss";
+
+.app-section6 {
+  padding-top: 5rem;
+  position: relative;
+  overflow: hidden;
+
+  button {
+    background-color: $green;
+    color: $white;
+    font-size: 2.5rem;
+    padding: 1.2rem 9rem;
+    border: none;
+    @include laptop {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include laptop-xxl {
+      display: block;
+    }
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+    @include laptop-xxl {
+      width: 80%;
+    }
+  }
+
+  &__right img {
+    position: absolute;
+    z-index: -1;
+    top: 20%;
+    right: -28rem;
+    width: 84.7rem;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+
+    @include laptop-xxl {
+      display: none;
+    }
+  }
+
+  &__right div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 70rem;
+    min-width: 35rem;
+
+    @include laptop-xxl {
+    }
+  }
+  &__header-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    div {
+      width: 0.5rem;
+      height: 9rem;
+      background-color: $green;
+    }
+  }
+  &__left {
+    h1 {
+      color: $black;
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin-left: 1.5rem;
+
+      @include laptop {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      margin: 2rem 0;
+      font-size: 2.5rem;
+      color: $black;
+
+      @include laptop {
+        font-size: 1.5rem;
+      }
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    @include laptop-xxl {
+      margin-top: 3rem;
+    }
+  }
+
+  &__middle-wrapper {
+    margin: 10rem auto 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 4.5rem;
+      color: $black;
+
+      @include laptop {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      font-size: 2.5rem;
+      color: $black;
+
+      @include laptop {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__footer-wrapper {
+    width: 100%;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 3rem 0;
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 400;
+      color: $white;
+      margin-bottom: 2rem;
+      @include center-mode;
+
+      @include laptop {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__footer-inputs {
+    width: 57.7rem;
+    margin: auto;
+
+    @include tablet {
+      width: 90%;
+    }
+  }
+
+  &__expandIcon {
+    font-size: 2rem;
+    color: $white;
+  }
+  &__accordion-summary {
+    font-size: 1.5rem;
+    color: $white;
+  }
+  &__accordion-details {
+    font-size: 1.2rem;
+    color: $white;
+  }
+}

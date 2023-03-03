@@ -1,0 +1,142 @@
+@import "../../styles/styles.scss";
+
+.app-section4 {
+  padding-top: 5rem;
+  // position: relative;
+
+  button {
+    background-color: $green;
+    color: $white;
+    font-size: 2.5rem;
+    padding: 1.2rem 9rem;
+    border: none;
+    @include laptop {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include laptop-xxl {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+    @include laptop-xxl {
+      width: 80%;
+    }
+  }
+
+  &__right img:nth-child(1) {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 100%;
+  }
+
+  &__right img:nth-child(2) {
+    width: 100%;
+    max-width: 38rem;
+    // min-width: 20rem;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__right div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    max-width: 70rem;
+    min-width: 35rem;
+
+    @include laptop-xxl {
+    }
+  }
+
+  &__left {
+    h1 {
+      color: $black;
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+
+      @include laptop {
+        font-size: 3rem;
+      }
+    }
+
+    div {
+      width: 11rem;
+      height: 0.5rem;
+      background-color: $green;
+    }
+
+    p {
+      margin: 2rem 0;
+      font-size: 2.5rem;
+      color: $black;
+
+      @include laptop {
+        font-size: 1.5rem;
+      }
+    }
+
+    @include laptop-xxl {
+      margin-top: 3rem;
+    }
+  }
+
+  &__middle-wrapper {
+    margin: 10rem auto 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 4.5rem;
+      color: $black;
+
+      @include laptop {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      font-size: 2.5rem;
+      color: $black;
+
+      @include laptop {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__footer-wrapper {
+    width: 100%;
+    background: $blue_background;
+    @include center-mode;
+
+    div {
+      padding: 1rem 0 5rem 0;
+      @include center-mode;
+      flex-direction: column;
+
+      img {
+        width: 35rem;
+        display: block;
+      }
+    }
+  }
+}

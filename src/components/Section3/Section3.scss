@@ -1,0 +1,138 @@
+@import "../../styles/styles.scss";
+
+.app-section3 {
+  padding: 3rem 15rem;
+  background-size: cover !important;
+
+  @include tablet {
+    padding: 3rem 10rem;
+  }
+  @include phones {
+    padding: 3rem 3rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include laptop-xxl {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__left {
+    width: 60%;
+    padding-right: 6rem;
+
+    @include laptop-xxl {
+      margin-bottom: 4rem;
+      padding-right: 0;
+    }
+  }
+  &__right,
+  &__left {
+    @include laptop-xxl {
+      width: 70% !important;
+    }
+    @include laptop-xl {
+      width: 80% !important;
+    }
+    @include laptop {
+      width: 100% !important;
+    }
+  }
+
+  &__right {
+    width: 40%;
+    padding-left: 6rem;
+    border-left: 3px solid white;
+    @include center-mode;
+    flex-direction: column;
+    @include laptop-xxl {
+      border-top: 3px solid white;
+      border-left: none;
+      padding-top: 2rem;
+      align-items: start;
+      padding-left: 0;
+    }
+
+    h1 {
+      font-size: 4.2rem;
+      color: $white;
+
+      @include laptop {
+        font-size: 3rem;
+      }
+    }
+
+    h1:nth-child(2) {
+      margin: 4rem 0;
+    }
+
+    button {
+      font-size: 2.5rem;
+      border: none;
+      padding: 1.2rem 8rem;
+      color: $white;
+      background-color: $green;
+    }
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    h1 {
+      color: $white;
+      font-size: 4.5rem;
+      margin-bottom: 2rem;
+      @include laptop {
+        font-size: 3rem;
+      }
+    }
+
+    div {
+      width: 34rem;
+      height: 1.5rem;
+      background-color: $green;
+      @include laptop {
+        width: 25rem;
+      }
+    }
+  }
+
+  &__price-title {
+    display: flex;
+    justify-content: space-between;
+    p {
+      color: $white;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+
+      @include laptop {
+        font-size: 2rem;
+      }
+      @include tablet {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  &__price-footer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-size: 1.7rem;
+      color: $white;
+    }
+  }
+
+  &__footer {
+    color: $white;
+    margin-top: 3rem;
+    font-size: 2rem;
+
+    @include laptop {
+      font-size: 1.5rem;
+    }
+  }
+}

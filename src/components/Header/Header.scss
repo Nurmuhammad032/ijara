@@ -1,0 +1,131 @@
+@import "../../styles/styles.scss";
+
+.nav {
+  &__container {
+    height: 10rem;
+    display: flex;
+    padding-right: $container-padding;
+    align-items: center;
+    background-color: transparent;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.2s ease-in-out;
+
+    @include laptop {
+      padding-right: $container-laptopPadding;
+    }
+
+    @include phones {
+      padding-right: $container-phonePadding;
+    }
+  }
+
+  &__scrolled {
+    height: 6rem;
+    background-color: $black;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 30rem;
+
+    img {
+      width: 100%;
+    }
+
+    @include phones {
+      width: 24rem;
+    }
+  }
+
+  &__menu {
+    display: flex;
+
+    li {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      margin-right: 3.2rem;
+      color: $white;
+      font-size: 2rem;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    @include large-screen {
+      display: none;
+    }
+  }
+
+  &__large-dropdown {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 50%;
+    top: 2.7rem;
+    width: 24rem;
+    transform: translateX(-50%);
+    background-color: $white;
+    padding: 1rem 0;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.3rem;
+    transition: all 0.1s ease-in;
+
+    a {
+      display: block;
+      width: 100%;
+      padding: 1rem 2rem;
+      color: $black;
+    }
+
+    a:hover {
+      background-color: #e6e4e4;
+    }
+  }
+
+  &__drop-wrapper:hover .nav__large-dropdown {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__language h1 {
+    display: flex;
+  }
+  &__language {
+    @include laptop {
+      display: none;
+    }
+  }
+  &__language span {
+    display: block;
+    font-size: 2.5rem;
+    color: $white;
+    cursor: pointer;
+  }
+  &__language span:first-child {
+    margin-right: 1rem;
+    color: $green;
+  }
+
+  &__hamburger span {
+    display: none;
+    font-size: 4rem;
+    color: $white;
+
+    @include large-screen {
+      display: block;
+    }
+  }
+}
