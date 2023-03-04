@@ -21,6 +21,18 @@
     @include phones {
       padding-right: $container-phonePadding;
     }
+
+    .dropdown-arrow {
+      position: absolute;
+      top: -1.7rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      > * {
+        font-size: 3rem;
+        color: $white;
+      }
+    }
   }
 
   &__scrolled {
@@ -74,7 +86,7 @@
     visibility: hidden;
     opacity: 0;
     left: 50%;
-    top: 2.7rem;
+    top: 3.4rem;
     width: 24rem;
     transform: translateX(-50%);
     background-color: $white;
@@ -88,10 +100,12 @@
       width: 100%;
       padding: 1rem 2rem;
       color: $black;
+      transition: all 0.1s ease;
     }
 
     a:hover {
-      background-color: #e6e4e4;
+      background-color: $green;
+      color: $white;
     }
   }
 

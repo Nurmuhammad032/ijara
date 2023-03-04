@@ -2,6 +2,7 @@ import "./Header.scss";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { RiArrowDownSFill } from "react-icons/ri";
+import { RiArrowUpSFill } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 import SideMenu from "./SideMenu/SideMenu";
@@ -55,6 +56,9 @@ const Header = () => {
                     {link.title}
                     <RiArrowDownSFill />
                     <div className="nav__large-dropdown">
+                      <div className="dropdown-arrow">
+                        <RiArrowUpSFill />
+                      </div>
                       {link.links.map((li, i) => (
                         <Link key={i + 10} to={li.link}>
                           {li.label}

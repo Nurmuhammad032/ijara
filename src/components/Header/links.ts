@@ -4,12 +4,12 @@ export const links = [
     title: "O компании",
     links: [
       {
-        label: "Link",
-        link: "",
+        label: "Реквезиты",
+        link: "/lizing",
       },
       {
-        label: "Link",
-        link: "",
+        label: "Контакты",
+        link: "/contact",
       },
     ],
   },
@@ -18,12 +18,8 @@ export const links = [
     title: "Лизинговые программы",
     links: [
       {
-        label: "Link",
-        link: "",
-      },
-      {
-        label: "Link",
-        link: "",
+        label: "About",
+        link: "/about",
       },
     ],
   },

@@ -1,11 +1,11 @@
 @import "../../styles/styles.scss";
 
 .app {
-  &__lizing-container {
+  &__about-container {
     padding: 12rem 0;
     overflow: hidden;
 
-    .custom-container-lizing {
+    .custom-container-about {
       @include laptop-xxl {
         padding-right: $container-padding;
       }
@@ -18,7 +18,7 @@
     }
   }
 
-  &__lizing-wrapper {
+  &__about-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,7 @@
     }
   }
 
-  &__lizing-btnWrapper {
+  &__about-btnWrapper {
     display: flex;
     align-items: center;
 
@@ -45,9 +45,10 @@
     }
   }
 
-  &__lizing-imgWrapper {
+  &__about-imgWrapper {
     max-width: 78rem;
     position: relative;
+    text-align: end;
     @include laptop-xxl {
       display: none;
     }
@@ -55,21 +56,23 @@
     img:nth-child(2) {
       position: absolute;
       width: 140%;
-      right: -20rem;
+      right: -40rem;
       z-index: -1;
-      top: 14rem;
+      top: -4rem;
     }
   }
 
-  &__lizing-img {
-    width: 100%;
+  &__about-img {
+    width: 60%;
     object-fit: cover;
+    margin-right: 5rem;
   }
 
-  &__lizing-title {
+  &__about-title {
     color: $black;
     font-size: 6rem;
     font-weight: 700;
+    margin-bottom: 2rem;
 
     @include laptop-xxl {
       font-size: 5rem;
@@ -82,12 +85,14 @@
     }
   }
 
-  &__lizing-desc {
-    display: block;
+  &__about-desc {
     color: $black;
     font-size: 2.5rem;
-    line-height: 4rem;
-    margin: 3rem 0;
+    line-height: 3rem;
+
+    span {
+      font-weight: 700;
+    }
 
     @include laptop {
       font-size: 2rem;
@@ -98,7 +103,7 @@
     }
   }
 
-  &__lizing-btn {
+  &__about-btn {
     padding: 2rem 1.3rem;
     color: $green;
     font-size: 2.3rem;
@@ -118,11 +123,11 @@
     }
   }
 
-  &__lizing-btn:nth-child(1) {
+  &__about-btn:nth-child(1) {
     margin-right: 4rem;
     background-color: $green;
   }
-  &__lizing-btn:nth-child(2) {
+  &__about-btn:nth-child(2) {
     background-color: transparent;
 
     &:hover {
@@ -131,7 +136,7 @@
     }
   }
 
-  &__lizing-footer {
+  &__about-footer {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -159,7 +164,7 @@
     }
   }
 
-  &__lizingFooter-items {
+  &__aboutFooter-items {
     display: flex;
     align-items: center;
     padding: 4rem;
@@ -187,7 +192,7 @@
     }
   }
 
-  &__lizing-card-container {
+  &__about-card-container {
     padding: 0 $container-padding;
     margin: 5rem auto;
 
@@ -199,10 +204,10 @@
     }
   }
 
-  &__lizing-card-wrapper {
+  &__about-card-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 
     @include laptop-xl {
@@ -210,7 +215,7 @@
     }
   }
 
-  &__lizing-about {
+  &__about-about {
     display: flex;
     justify-content: space-between;
     width: 80%;
