@@ -164,7 +164,12 @@
     color: $white;
   }
   &__accordion-details {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 3rem;
     color: $white;
+
+    @include tablet {
+      line-height: 2.3rem;
+    }
   }
 }

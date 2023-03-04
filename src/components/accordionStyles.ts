@@ -7,8 +7,6 @@ export const accordionStyles = {
     opacity: "0.17",
   },
   "&.Mui-expanded": {
-    margin: "0",
-
     "&:before": {
       opacity: "0.17",
     },

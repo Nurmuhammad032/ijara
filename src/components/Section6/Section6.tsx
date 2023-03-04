@@ -9,21 +9,24 @@ import { accordionStyles, accordionSummeryStyles } from "../accordionStyles";
 const faq = [
   {
     title: "Чем лизинг отличается от кредита?",
-    desc: "desc",
+    desc: "При кредите банк передает заемщику денежные средства, а при лизинге — имущество. Покупая автомобиль за наличные или в кредит, вы становитесь его полноправным владельцем: машину можно продать, подарить. А при лизинге собственником остается лизинговая компания.Из-за того что при лизинге банк остается собственником, получить имущество в лизинг — проще и быстрее. Для лизинга как не требуется вносить значительный аванс, заявка рассматривается быстрее.",
   },
   {
     title: "Какие преимущества есть у лизинга?",
-    desc: "desc",
+    desc: "При кредите банк передает заемщику денежные средства, а при лизинге — имущество. Покупая автомобиль за наличные или в кредит, вы становитесь его полноправным владельцем: машину можно продать, подарить. А при лизинге собственником остается лизинговая компания. Из-за того что при лизинге банк остается собственником, получить имущество в лизинг — проще и быстрее. Для лизинга как не требуется вносить значительный аванс, заявка рассматривается быстрее.",
   },
 ];
 
 const Section6 = () => {
-  const [expanded, setExpanded] = useState<string | false>(false);
+  const [expanded, setExpanded] = useState<string[]>([]);
 
   const handleChange =
-    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-      setExpanded(isExpanded ? panel : false);
+    (panel: string) => (_: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(
+        isExpanded ? [...expanded, panel] : expanded.filter((p) => p !== panel)
+      );
     };
+
   return (
     <section className="app-section6">
       <div className="container">
@@ -83,7 +86,7 @@ const Section6 = () => {
           <div className="app-section6__footer-inputs">
             {faq.map((el, i) => (
               <Accordion
-                expanded={expanded === `panel${i}`}
+                expanded={expanded.includes(`panel${i}`)}
                 onChange={handleChange(`panel${i}`)}
                 sx={{
                   ...accordionStyles,
@@ -105,10 +108,6 @@ const Section6 = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <p className="app-section6__accordion-details">{el.desc}</p>
-                  {/* <Typography>
-                  Nulla facilisi. Phasellus sollicitudin nulla et quam mattis
-                  feugiat. Aliquam eget maximus est, id dignissim quam.
-                </Typography> */}
                 </AccordionDetails>
               </Accordion>
             ))}

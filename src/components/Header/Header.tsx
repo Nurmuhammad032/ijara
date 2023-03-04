@@ -53,7 +53,7 @@ const Header = () => {
               link.drop ? (
                 <li key={i} className="nav__drop-wrapper">
                   <>
-                    {link.title}
+                    <p>{link.title}</p>
                     <RiArrowDownSFill />
                     <div className="nav__large-dropdown">
                       <div className="dropdown-arrow">

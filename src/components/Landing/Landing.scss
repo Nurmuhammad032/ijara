@@ -109,6 +109,10 @@
   &__landing-btn:nth-child(1) {
     margin-right: 4rem;
     background-color: $green;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
   &__landing-btn:nth-child(2) {
     background-color: transparent;

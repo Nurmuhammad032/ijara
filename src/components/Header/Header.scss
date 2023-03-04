@@ -72,6 +72,17 @@
       font-size: 2rem;
     }
 
+    p,
+    a {
+      padding-bottom: 0.2rem;
+      border-bottom: 0.1rem solid transparent;
+    }
+
+    p:hover,
+    a:hover {
+      border-color: $white;
+    }
+
     a {
       color: inherit;
     }

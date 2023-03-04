@@ -121,6 +121,11 @@
   &__lizing-btn:nth-child(1) {
     margin-right: 4rem;
     background-color: $green;
+
+    &:hover {
+      background-color: transparent;
+      color: $green;
+    }
   }
   &__lizing-btn:nth-child(2) {
     background-color: transparent;
